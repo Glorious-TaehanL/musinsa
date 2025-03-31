@@ -62,7 +62,7 @@ npm start
 
 
 포스트맨을 사용하여 테스트를 진행했고, 도큐먼트화 하여 링크 첨부했습니다. 
-https://documenter.getpostman.com/view/26410790/2sB2cRBPT5
+https://documenter.getpostman.com/view/26410790/2sB2cRBPNp
 
 <hr>
 디비의 구성은 3가지입니다. 
