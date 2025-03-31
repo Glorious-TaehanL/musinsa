@@ -93,3 +93,7 @@ deleted_product_entity : 유저가 삭제한 상품의 경우 기록을 남기�
             seedData
                 -brad-data.json
                 -product-data.json
+
+이상입니다.
+
+코드와 긴글 읽어주셔서 감사합니다.
