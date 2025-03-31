@@ -50,15 +50,19 @@ npm start
 <hr>
 구현된 api 입니다.
 
-- /api/v1/product/health          [ GET ]    서버 상태체크
-- /api/v1/product/getMinPriceByCategories    [ GET ]    카테고리별로 최저가격의 브랜드와 상품을 조회하고 합을 확인합니다.
-- /api/v1/product/getMinPriceByBrand    [ GET ]    최저가격에 판매하는 브랜드의 모든상품의 합을 구합니다.
-- /api/v1/product/getBothPriceByCategory    [ POST ]    카테고리별로 최저가브랜드와 가격 최고가의 브랜드와 가격을 구합니다.
-- /api/v1/brand/create    [ POST ]    브랜드를 생성합니다.
-- /api/v1/brand/addProduct    [ POST ]    브랜드에 상품을 추가하는 개념으로 브랜드하위에 추가하였습니다.
-- /api/v1/brand/editProduct/{productId}    [ PUT ]    상품 수정시, 전체 데이터가 변경되는경우 put으로 전체업데이트 됩니다.
-- /api/v1/brand/editProduct/{productId}    [ PATCH ]    상품 수정시, 일부 데이터가 변경되는 경우 patch로 부분 업데이트 됩니다.
-- /api/v1/brand/deleteProduct/{productId}    [ DELETE ]    상품 삭제시 전달받은 id값의 상품을 삭제하고, 삭제테이블에 해당상품을 추가해 기록합니다.
+## 구현된 API 목록
+
+| API | METHOD | DESCRIPTION |
+| --- | --- | --- |
+| /api/v1/product/health | [ GET ] | 서버 상태체크 |
+| /api/v1/product/getMinPriceByCategories | [ GET ] | 카테고리별로 최저가격의 브랜드와 상품을 조회하고 합을 확인합니다. |
+| /api/v1/product/getMinPriceByBrand | [ GET ] | 최저가격에 판매하는 브랜드의 모든상품의 합을 구합니다. |
+| /api/v1/product/getBothPriceByCategory | [ POST ] | 카테고리별로 최저가브랜드와 가격 최고가의 브랜드와 가격을 구합니다. |
+| /api/v1/brand/create | [ POST ] | 브랜드를 생성합니다. |
+| /api/v1/brand/addProduct | [ POST ] | 브랜드에 상품을 추가하는 개념으로 접근하였고, 따라서 API 경로는 브랜드 하위에 추가하였습니다. 이후 새로운 브랜드가 `appProduct`와 들어온다면 새로운 브랜드를 생성하고, 상품을 추가하도록 작성하였습니다. |
+| /api/v1/brand/editProduct/{productId} | [ PUT ] | 일반적으로 많은 업데이트도 디비에 부담이 될수 있다 생각합니다. 이에따라 상품 정보 수정시, 전체 데이터가 변경되는 경우 `PUT`으로 처리될수 있도록 구성하였습니다.. |
+| /api/v1/brand/editProduct/{productId} | [ PATCH ] | 때에따라 일부분의 상품 정보만 수정시, 일부 데이터가 변경되는 경우 `PATCH`로 부분 업데이트 처리되도록 구성하였습니다. |
+| /api/v1/brand/deleteProduct/{productId} | [ DELETE ] | 상품 삭제시 전달받은 `id`값의 상품을 삭제하고, 직접적인 delete를 사용하였기때문에 다른 테이블에 삭제가된 상품의 정보를 저장하는 기능을 구현하였습니다. |
 
 
 포스트맨을 사용하여 테스트를 진행했고, 도큐먼트화 하여 링크 첨부했습니다. 
